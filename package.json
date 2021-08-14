@@ -1,5 +1,5 @@
 {
-  "name": "giffy",
+  "name": "gifox",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://jesus-molano.github.io/gifox-app/",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf docs && mv build docs",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
