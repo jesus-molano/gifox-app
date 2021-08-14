@@ -1,0 +1,41 @@
+@import 'App.css';
+
+
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.container{
+  min-height: 100vh;
+}
+.container h3{
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-inline: 1rem;
+}
+
+.button{
+  background-color: var(--clr-primary);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 900;
+  height: 3rem;
+  padding-block: 5px;
+  padding-inline: 10px;
+  width: min(5rem, 80vw);
+  margin-block: 2rem;
+}
+
+.button:hover{
+  background-color:rgb(240, 161, 58) ;
+}
+
+@media (max-width: 700px) {
+  .main{
+    flex-direction: column;
+  }
+}

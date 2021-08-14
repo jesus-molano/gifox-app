@@ -1,0 +1,60 @@
+@import 'App.css';
+
+
+.header{
+  width: 100%;
+}
+
+header{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+header a{
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 3px;
+  gap: 0.5rem;
+  width:fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1{
+  text-align: center;
+  color: #eee;
+  font-family: var(--font-logo);
+  font-size: clamp(2rem, 20vw, 8rem);
+}
+
+.gifox-logo{
+  height: clamp(2rem, 15vw, 7rem);
+}
+form{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+input{
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border: none;
+  color: grey;
+  font-size: 1.3rem;
+  height: 40px;
+  padding-block: 5px;
+  padding-inline: 10px;
+  width: min(50rem, 60vw);
+}
+input:focus{
+  border: 3px solid var(--clr-primary);
+  outline: none;
+}
+
+#search-button{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 40px;
+}

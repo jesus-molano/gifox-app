@@ -1,0 +1,28 @@
+#detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+figure > img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 6.5px;
+  border-bottom-left-radius: 16px;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.3rem 0.3rem 0.6rem;
+  color: #fff;
+  background-color: rgba(49, 49, 49, 0.315);
+}
