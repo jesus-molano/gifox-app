@@ -6,6 +6,7 @@
 .category-title{
   font-size: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 ul{
@@ -33,10 +34,7 @@ li > a:hover, li> a:focus{
 
 @media (max-width: 700px){
   .category{
-    border-top: 2px solid var(--clr-primary);
-    max-width: 100%;
-    padding: 1rem 1rem 2rem 1rem;
-    margin: 0;
+    display: none;
   }
   .category h3{
     text-align: center;

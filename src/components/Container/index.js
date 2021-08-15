@@ -10,13 +10,14 @@ const Container = ({ keyword, mode }) => {
   const { loading, gifs, setPage } = useGifs({ keyword }, mode)
   const externalRef = useRef();
   const { isNearScreen } = useNearScreen({
+    distance: '400px',
     externalRef: loading ? null : externalRef,
     once: false
   });
 
 
   const debounceHandleNextPage = useCallback(debounce(
-    () => setPage(prevPage => prevPage + 1), 300
+    () => setPage(prevPage => prevPage + 1), 500
   ), [])
 
   useEffect(function () {
