@@ -4,7 +4,7 @@ import { useLocation } from 'wouter';
 const Form = () => {
 
   const [keyword, setKeyword] = useState('');
-  const [path, pushLocation] = useLocation();
+  const [, pushLocation] = useLocation();
 
 
   const handleSubmit = useCallback((e) => {

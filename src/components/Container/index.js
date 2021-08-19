@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback } from 'react'
+import React, { useRef, useEffect} from 'react'
 import useGifs from 'hooks/useGifs'
 import useNearScreen from 'hooks/useNearScreen'
 import ListOfGifs from '../ListOfGifs'
@@ -10,15 +10,18 @@ const Container = ({ keyword, mode }) => {
   const { loading, gifs, setPage } = useGifs({ keyword }, mode)
   const externalRef = useRef();
   const { isNearScreen } = useNearScreen({
-    distance: '400px',
+    distance: '200px',
     externalRef: loading ? null : externalRef,
     once: false
   });
 
 
-  const debounceHandleNextPage = useCallback(debounce(
-    () => setPage(prevPage => prevPage + 1), 500
-  ), [])
+  const debounceHandleNextPage = React.useMemo(
+    () =>
+    debounce(() => {
+      setPage(prevPage => prevPage + 1)
+    }, 500
+  ), [setPage])
 
   useEffect(function () {
     if(isNearScreen) debounceHandleNextPage()

@@ -1,9 +1,15 @@
 :root{
   font-size: 16px;
   --clr-primary: #FFAC09;
+  --clr-secondary: #FFDE03;
+  --clr-tertiary: #FF6B03;
   --clr-background: #1b1d22;
   --font-logo: 'Just Another Hand', cursive;
   --font-body: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 *{
@@ -11,7 +17,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: var(--font-body);
-
 }
 
 .App-content {
@@ -23,7 +28,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 
@@ -44,6 +49,7 @@ h3{
 @media (max-width: 700px){
   .App-content{
     padding: 0;
+    gap: 0;
   }
 }
 

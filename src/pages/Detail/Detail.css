@@ -1,0 +1,63 @@
+@import 'App.css';
+
+#detail{
+  display: flex;
+  max-width: 87.5rem;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+
+}
+
+#detail figure{
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+}
+
+#detail img{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  object-fit: cover;
+  object-position:bottom;
+}
+
+#detail figcaption {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  position:initial;
+  background-color: var(--clr-secondary);
+  text-transform: capitalize;
+  border-bottom-left-radius: 0;
+  color: var(--clr-background);
+}
+
+#detail a{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.detail-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  #detail{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .detail-menu{
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
