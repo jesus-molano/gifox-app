@@ -1,13 +1,27 @@
-import React from 'react';
+import GifPlaceholder from 'components/GifPlaceholder';
+import React, { useState } from 'react';
 import { Link } from 'wouter';
-import './Gif.css'
+import './Gif.css';
 
-const Gif = ({title, id, url}) => {
+const Gif = ({ title, id, url }) => {
+	const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+	const handleLoad = () => {
+		setTimeout(() => setIsImageLoaded(true), 1000);
+	};
+
 	return (
-		<Link to={`/gif/${id}`} className="Gif">
-			<figure>
-				<img loading="lazy" src={url} alt='giff' />
-				<figcaption>{ title }</figcaption>
+		<Link to={`/gif/${id}`} className='Gif'>
+			{!isImageLoaded && <GifPlaceholder />}
+			<figure className={`${isImageLoaded ? 'loaded' : 'loading'}`}>
+				<img
+					className={`${isImageLoaded ? 'loaded' : 'loading'}`}
+					loading='lazy'
+					src={url}
+					alt='giff'
+					onLoad={handleLoad()}
+				/>
+				<figcaption>{title}</figcaption>
 			</figure>
 		</Link>
 	);
