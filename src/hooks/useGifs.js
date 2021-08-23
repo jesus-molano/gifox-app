@@ -4,7 +4,7 @@ import GifsContext from 'context/GifsContext'
 
 const INITIAL_PAGE = 0
 
-const useGifs = ({keyword} = {keyword: null}, mode) => {
+const useGifs = ({keyword, rating, mode} = {keyword: null}) => {
 
   const [loading, setLoading] = useState(false);
   const [loadingNextPage, setLoadingNextPage] = useState(false);
@@ -14,30 +14,31 @@ const useGifs = ({keyword} = {keyword: null}, mode) => {
   // recuperamos la keyword del localstorage
   const keywordToUse = keyword || localStorage.getItem('lastKeyword');
   const modeToUse = mode || 'trending';
+  const ratingToUse = rating || 'g';
 
   useEffect(function () {
     setLoading(true);
 
-    getGifs({ keyword: keywordToUse, mode: modeToUse })
+    getGifs({ keyword: keywordToUse, mode: modeToUse, rating: ratingToUse })
       .then((gifs) => {
         setGifs(gifs);
         setLoading(false);
         // guardamos la keyword en el localstorage
         localStorage.setItem('lastKeyword', keyword)
 		});
-  }, [keyword, keywordToUse,modeToUse, setGifs]);
+  }, [keyword, keywordToUse,modeToUse, setGifs, rating, ratingToUse]);
 
   useEffect(function () {
     if (page === INITIAL_PAGE) return
     setLoadingNextPage(true)
 
-    getGifs({ keyword: keywordToUse, mode: modeToUse, page })
+    getGifs({ keyword: keywordToUse, mode: modeToUse, page, rating: ratingToUse })
       .then(nextGifs => {
         setGifs(prevGifs => prevGifs.concat(nextGifs))
         setLoadingNextPage(false)
       })
     
-  }, [page, keywordToUse, modeToUse, setGifs])
+  }, [page, keywordToUse, modeToUse, setGifs, rating, ratingToUse])
 
   return {loading, loadingNextPage, gifs, setPage}
 }

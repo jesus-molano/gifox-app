@@ -1,6 +1,5 @@
 .category {
 	max-width: 8rem;
-	max-height: 100vh;
 	margin-top: 5rem;
 	margin-inline: 2rem;
 }
@@ -13,7 +12,7 @@
 ul {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.8rem;
+	gap: 0.5rem;
 	justify-content: center;
 	max-width: 100vw;
 }
@@ -25,7 +24,6 @@ li {
 li > a {
 	font-size: clamp(0.8rem, 1.8vw, 0.8rem);
 	padding: 0.3rem;
-	border-radius: 16px;
 	font-weight: 700;
 	white-space: nowrap;
 }
@@ -37,7 +35,7 @@ li > a:focus {
 
 .category-bg-1 {
 	background-color: var(--clr-primary);
-	color: #fff;
+	color: var(--clr-background);
 }
 .category-bg-2 {
 	background-color: var(--clr-secondary);
@@ -45,7 +43,8 @@ li > a:focus {
 }
 .category-bg-3 {
 	background-color: var(--clr-tertiary);
-	color: #fff;
+	color: var(--clr-background);
+	
 }
 
 @media (max-width: 700px) {

@@ -6,7 +6,6 @@
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
-
 }
 
 #detail figure{
@@ -16,18 +15,17 @@
 }
 
 #detail img{
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
   object-fit: cover;
   object-position:bottom;
+  border: none;
 }
 
 #detail figcaption {
   font-size: clamp(1rem, 4vw, 1.5rem);
+  font-weight: 700;
   position:initial;
-  background-color: var(--clr-secondary);
+  background: linear-gradient(90deg, var(--clr-primary) 0%, var(--clr-secondary) 100%);
   text-transform: capitalize;
-  border-bottom-left-radius: 0;
   color: var(--clr-background);
 }
 

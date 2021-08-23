@@ -6,8 +6,8 @@ import Spinner from 'components/Spinner'
 import debounce from 'just-debounce-it'
 
 
-const Container = ({ keyword, mode }) => {
-  const { loading, gifs, setPage } = useGifs({ keyword }, mode)
+const Container = ({ keyword, mode, rating }) => {
+  const { loading, gifs, setPage } = useGifs({ keyword, rating, mode })
   const externalRef = useRef();
   const { isNearScreen } = useNearScreen({
     distance: '200px',

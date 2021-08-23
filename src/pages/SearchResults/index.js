@@ -4,7 +4,7 @@ import GoToTop from "components/GoToTop";
 import { Helmet } from "react-helmet";
 
 const SearchResults = ({ params }) => {
-  const { keyword } = params;
+  const { keyword, rating = 'g' } = params;
   const title = `Results of "${decodeURI(keyword)}"`
 
 
@@ -15,7 +15,7 @@ const SearchResults = ({ params }) => {
 				<meta name="description" content={title}></meta>
       </Helmet>
       <Header />
-      <Container keyword={keyword} mode='search' />
+      <Container keyword={keyword} mode='search' rating={rating} />
       <GoToTop />
     </>
   )

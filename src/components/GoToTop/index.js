@@ -20,7 +20,7 @@ const GoToTop = () => {
 			<a href='#header-logo' className={isActive ? 'show' : 'hidden'}>
 				<ArrowIcon
 					direction='up'
-					color='#FFAC09'
+					color='#D3FF13'
 					width='60'
 					height='60'
 					goInit='true'

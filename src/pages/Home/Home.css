@@ -15,24 +15,6 @@
 	margin-inline: 1rem;
 }
 
-.button {
-	background-color: var(--clr-primary);
-	border: none;
-	border-radius: 6px;
-	color: #fff;
-	font-family: var(--font-body);
-	font-weight: 900;
-	height: 3rem;
-	padding-block: 5px;
-	padding-inline: 10px;
-	width: min(5rem, 80vw);
-	margin-block: 2rem;
-}
-
-.button:hover {
-	background-color: rgb(240, 161, 58);
-}
-
 .hidden{
   display: none;
 }
