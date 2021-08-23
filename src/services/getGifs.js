@@ -1,5 +1,5 @@
 import { API_KEY, API_URL } from "./settings";
-const getGifs = ({ keyword, mode, page = 0, limit=20, rating } = {}) => {
+const getGifs = ({ keyword, mode, page = 0, limit=25, rating } = {}) => {
   
   let apiUrl = null;
 

@@ -33,7 +33,7 @@ const Container = ({ keyword, mode, rating }) => {
       {loading
         ? <Spinner />
         : <>
-          <h3>{decodeURI(keyword)}</h3>
+          <h2><span>{decodeURI(keyword)}</span></h2>
           <ListOfGifs gifs={gifs} />
           <div id='visor' ref={externalRef}></div>
         </>

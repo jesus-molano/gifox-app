@@ -29,7 +29,7 @@ html {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 1rem;
+	gap: 3rem;
 }
 
 a {
@@ -47,14 +47,10 @@ h6 {
 	text-transform: capitalize;
 }
 
-h3 {
-	text-decoration: underline;
-}
-
 @media (max-width: 700px) {
 	.App-content {
 		padding: 0;
-		gap: 0;
+		gap: 2rem;
 	}
 }
 
