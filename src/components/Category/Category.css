@@ -12,7 +12,8 @@
 ul {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.5rem;
+	row-gap: 1.1rem;
+	column-gap: 0.4rem;
 	justify-content: center;
 	max-width: 100vw;
 }
@@ -22,10 +23,12 @@ li {
 }
 
 li > a {
-	font-size: clamp(0.8rem, 1.8vw, 0.8rem);
-	padding: 0.3rem;
+	font-size: clamp(0.9rem, 1.8vw, 0.8rem);
+	padding: 0.5rem;
 	font-weight: 700;
 	white-space: nowrap;
+	min-width: 3rem;
+	min-height: 3rem;
 }
 
 li > a:hover,
