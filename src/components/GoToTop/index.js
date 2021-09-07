@@ -1,32 +1,33 @@
 import ArrowIcon from 'components/ArrowIcon';
 import useNearScreen from 'hooks/useNearScreen';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState, useRef} from 'react';
 
 const GoToTop = () => {
 	const ref = useRef();
-	const [isActive, setIsActive] = useState(false);
+	const [isHidden, setIsHidden] = useState('hidden')
 
 	const { isNearScreen } = useNearScreen({
 		distance: '5px',
 		externalRef: ref,
+		once:false,
 	});
 
 	useEffect(() => {
-		isNearScreen && setIsActive((prevState) => !prevState);
+		isNearScreen ? setIsHidden('hidden') : setIsHidden('show');
 	}, [isNearScreen]);
 
 	return (
 		<>
-			<a href='#header-logo' className={isActive ? 'show' : 'hidden'}>
+			<a id="goToTop" ref={ref} href='#goToTop' >
 				<ArrowIcon
+					show={isHidden}
 					direction='up'
 					color='#D3FF13'
 					width='60'
 					height='60'
-					goInit='true'
+					goToTop='true'
 				/>
 			</a>
-			<div className='Arrow-visor' ref={ref}></div>
 		</>
 	);
 };

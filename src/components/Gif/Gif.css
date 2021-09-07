@@ -1,15 +1,17 @@
-figure {	position: relative;
+figure {	
+	position: relative;
 	margin: 0;
 	overflow: hidden;
 	max-width: 100%;
 	animation: fadeIn 1s;
+	
 }
 
 figure > img {
   border: 3px solid transparent;
-	background-color: rgb(18, 18, 22);
+	max-height: 80vh;
 	width: 100%;
-  
+	transition:all 0.5s;
 }
 
 figcaption {
@@ -20,14 +22,6 @@ figcaption {
 	padding: 0.3rem 0.3rem 0.3rem 0.6rem;
 	color: #fff;
 	background-color: rgba(49, 49, 49, 0.315);
-}
-
-.loaded{
-	display: block;
-}
-
-.loading{
-	display: none;
 }
 
 @keyframes fadeIn {

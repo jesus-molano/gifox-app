@@ -30,6 +30,7 @@ html {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 3rem;
+	position: relative;
 }
 
 a {
@@ -70,6 +71,7 @@ h6 {
 	flex-direction: column;
 	gap: 1rem;
 }
+
 .my-masonry-grid_column img:hover,
 .my-masonry-grid_column img:focus {
 	border-image: linear-gradient(

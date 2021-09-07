@@ -3,15 +3,16 @@ import './ArrowIcon.css';
 import React from 'react';
 
 const ArrowIcon = ({
+	show = 'show',
 	direction = 'right',
 	height = '24',
 	width = '24',
   color = '#fff',
-  goInit= false,
+  goToTop= false,
 } = {}) => {
 	return (
 		<svg
-			className={`${direction} ${goInit ? 'goInit' : ''} arrowIcon`}
+			className={`${direction} ${show} ${goToTop ? 'go-to-top' : ''} arrowIcon`}
 			fill={`${color}`}
 			width={`${width}`}
 			height={`${height}`}

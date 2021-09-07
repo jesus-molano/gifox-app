@@ -1,0 +1,23 @@
+.login-bar{
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+}
+
+.login-bar a,
+.login-bar button{
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.login-bar a:hover,
+.login-bar button:hover{
+  text-decoration: underline;
+}
+
+.login-bar button{
+  border: none;
+  background: none;
+}

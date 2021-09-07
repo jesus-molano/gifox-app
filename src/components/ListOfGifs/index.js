@@ -4,9 +4,9 @@ import Gif from '../Gif';
 const ListOfGifs = ({ gifs }) => {
 	const breakpoints = {
 		default: 5,
-		1500: 4,
-		1200: 3,
-		1000: 2,
+		1750: 4,
+		1400: 3,
+		1050: 2,
 		700: 1,
 	};
 

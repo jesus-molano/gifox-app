@@ -10,13 +10,13 @@ const SearchResults = ({ params }) => {
 
   return (
     <>
+      <GoToTop />
       <Helmet>
         <title>{title} | GiFox</title>
 				<meta name="description" content={title}></meta>
       </Helmet>
       <Header />
       <Container keyword={keyword} mode='search' rating={rating} />
-      <GoToTop />
     </>
   )
 }

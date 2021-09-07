@@ -11,7 +11,7 @@ const useNearScreen = ({
 	useEffect(() => {
 		let observer;
 
-		const element = externalRef ? externalRef.current : fromRef.current; 
+		const element = externalRef ? externalRef.current : fromRef.current;
 
 		const onChange = (entries, observer) => {
 			const el = entries[0];
